@@ -7,18 +7,17 @@ class List {
 // Constructors and member functions
 public:
 	List();
-	List(int value);
 	List(const List &list);
 
-	int at(int index);
+	int at(size_t index);
 	int front();
 	int back();
 
-	void pop_at(int index);
+	void pop_at(size_t index);
 	void pop_front();
 	void pop_back();
 
-	void push_at(int index, int value);
+	void push_at(size_t index, int value);
 	void push_front(int value);
 	void push_back(int value);
 
@@ -36,9 +35,8 @@ private:
 		Node* next;
 		Node* prev;
 	};
-
-	int value;
-	int index;
+	
+	size_t num_nodes;
 	Node* head;
 	Node* tail;
 
